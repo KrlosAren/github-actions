@@ -13,7 +13,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: node --max_old_space_size=9048 ./node_modules/@angular/cli/bin/ng build --prod --base-href 
+        run: ng build --prod --base-href
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
@@ -34,4 +34,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist/
+          FOLDER: dist
