@@ -30,7 +30,7 @@ jobs:
         with:
           name: dist
       - name: Deploy to GitHub Pages
-        uses: KrlosAren/Github-Release-Action@master
+        uses: KrlosAren/github-pages-deploy-action@4.1.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
